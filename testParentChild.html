@@ -1,0 +1,27 @@
+<head>
+  <title>testParentChild</title>
+</head>
+
+<body>
+  {{> eventHandler}}
+</body>
+
+<template name="eventHandler">
+  {{> parentTemplate}}
+</template>
+
+<template name="parentTemplate">
+  <h1>parentTemplate</h1>
+  {{didItWork "parent"}}
+  {{canItWorkFromEveryWhere "parent"}}
+  <button class="btnDoSomething">Parent Button</button>
+  <hr/>
+  {{> childTemplate}}
+</template>
+
+<template name="childTemplate">
+  <h2>childTemplate</h2>
+  {{diditWork "child"}}
+  {{canItWorkFromEveryWhere "child"}}
+  <button class="btnDoSomething">Child Button</button>
+</template>
